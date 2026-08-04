@@ -5,13 +5,13 @@
 class Gc < Formula
   desc "GitCode CLI - Command line tool for GitCode"
   homepage "https://gitcode.com/gitcode-cli/cli"
-  version "0.10.1"
+  version "0.10.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gitcode-cli/cli/releases/download/v0.10.1/gc_0.10.1_darwin_amd64.tar.gz"
-      sha256 "c27a2a3a5a7d6aba8e1dfcc9ab4d8f8153bd6ef90805faf2ebf5d9e64cc27843"
+      url "https://github.com/gitcode-cli/cli/releases/download/v0.10.2/gc_0.10.2_darwin_amd64.tar.gz"
+      sha256 "683f0d43e0a4d7bc8b2d06c919fb4efd7357f9251518648f33e7223b5d428275"
 
       define_method(:install) do
         bin.install "gc"
@@ -21,8 +21,8 @@ class Gc < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gitcode-cli/cli/releases/download/v0.10.1/gc_0.10.1_darwin_arm64.tar.gz"
-      sha256 "c66801a7a6840c37d47188acfa7e4a5655af2cba280494c03e8e0648c8850a78"
+      url "https://github.com/gitcode-cli/cli/releases/download/v0.10.2/gc_0.10.2_darwin_arm64.tar.gz"
+      sha256 "3e3087fd44e482555a1bf67340af3a8076be5c1cac53efa1226f48e684c0e03c"
 
       define_method(:install) do
         bin.install "gc"
@@ -35,8 +35,8 @@ class Gc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gitcode-cli/cli/releases/download/v0.10.1/gc_0.10.1_linux_amd64.tar.gz"
-      sha256 "ea1b670054feb701053e6d594edd559e8d58e1dc7fa3781dec470855f323fada"
+      url "https://github.com/gitcode-cli/cli/releases/download/v0.10.2/gc_0.10.2_linux_amd64.tar.gz"
+      sha256 "c40389f47946d48c64384a38c6e294c86db5cc7153318285145118f91c441558"
       define_method(:install) do
         bin.install "gc"
         bash_completion.install "completions/gc.bash" => "gc"
@@ -45,8 +45,8 @@ class Gc < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gitcode-cli/cli/releases/download/v0.10.1/gc_0.10.1_linux_arm64.tar.gz"
-      sha256 "941994cb0fd3ba5a466bea4cc00de48269384c2c7948f52c6e2be8eea4680472"
+      url "https://github.com/gitcode-cli/cli/releases/download/v0.10.2/gc_0.10.2_linux_arm64.tar.gz"
+      sha256 "091316253c6ecb32fad605dde5ebb40b79b067d4cd3d4f37d67d5855ca0ac1a7"
       define_method(:install) do
         bin.install "gc"
         bash_completion.install "completions/gc.bash" => "gc"
